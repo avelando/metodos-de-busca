@@ -15,27 +15,27 @@ public class Main {
 
         System.out.println("-> Buscas não informadas <-\n");
 
-        List<String> pathBFS = BreadthFirst.breadthFirstSearch(graph, "A", "R");
+        List<String> pathBFS = BreadthFirst.breadthFirstSearch(graph, "Arad", "Bucharest");
         System.out.println("Caminho de Arad até Bucharest usando Busca em Largura:\n" + pathBFS);
 
-        List<String> pathDFS = DepthFirst.depthFirstSearch(graph, "A", "R");
+        List<String> pathDFS = DepthFirst.depthFirstSearch(graph, "Arad", "Bucharest");
         System.out.println("\nCaminho de Arad até Bucharest usando Busca em Profundidade:\n" + pathDFS);
 
-        List<String> pathDL = DepthLimited.depthLimitedSearch(graph, "A", "R", depthLimit);
+        List<String> pathDL = DepthLimited.depthLimitedSearch(graph, "Arad", "Bucharest", depthLimit);
         System.out.println("\nCaminho de Arad até Bucharest usando Busca em Profundidade Limitada:\n" + pathDL);
 
-        List<String> pathUC = UniformCost.uniformCostSearch(graph, "A", "R");
+        List<String> pathUC = UniformCost.uniformCostSearch(graph, "Arad", "Bucharest");
         System.out.println("\nCaminho de Arad até Bucharest usando Busca em Custo Uniforme:\n" + pathUC);
 
-        List<String> pathID = IterativeDeepening.iterativeDeepeningSearch(graph, "A", "R");
+        List<String> pathID = IterativeDeepening.iterativeDeepeningSearch(graph, "Arad", "Bucharest");
         System.out.println("\nCaminho de Arad até Bucharest usando Busca em Profundidade Iterativa:\n" + pathID);
 
         System.out.println("\n-> Buscas informadas <-\n");
 
-        List<String> pathAStar = AStar.aStarSearch(graph, "A", "R");
+        List<String> pathAStar = AStar.aStarSearch(graph, "Arad", "Bucharest");
         System.out.println("Caminho de Arad até Bucharest usando A*:\n" + pathAStar);
 
-        List<String> pathGreedy = Greedy.greedySearch(graph, "A", "R");
+        List<String> pathGreedy = Greedy.greedySearch(graph, "Arad", "Bucharest");
         System.out.println("\nCaminho de Arad até Bucharest usando Busca Gulosa:\n" + pathGreedy);
     }
 }
